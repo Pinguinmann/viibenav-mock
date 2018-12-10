@@ -1,0 +1,25 @@
+<ion-content padding [formGroup]="searchForm">
+  <ion-row>
+    <ion-col size="12">
+      <p>Geben Sie den Namen einer Person oder eines Raumes ein, den Sie aufsuchen möchten.</p>
+    </ion-col>
+  </ion-row>
+  <ion-row class="text-search">
+    <ion-col size="10">
+      <ion-label color="primary">Person oder Zimmername des Ziels:</ion-label>
+      <ion-input placeholder="Eingabe" formControlName="searchRequest"></ion-input>
+    </ion-col>
+    <ion-col size="2" align-self-end>
+      <ion-button (click)="showResults()" class="custom-btn-rounded">
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row class="speech-search">
+    <ion-col class="d-flex" justify-content-center>
+      <ion-button (click)="checkPermission()" class="custom-btn-rounded">
+        <ion-icon name="mic"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

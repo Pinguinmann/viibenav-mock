@@ -1,0 +1,21 @@
+<ion-content padding>
+  <ion-row class="direction-wrapper">
+    <ion-col class="d-flex" justify-content-center (swipe)="swiped($event);">
+      <ion-icon class="direction-icon" name="navigate" [style.transform]="'rotate(' + (rotateFactor ? rotateFactor : 0) + 'deg)'"></ion-icon>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="interaction-buttons">
+    <ion-col>
+      <ion-button class="custom-btn-rounded">
+        <ion-icon name="information" (click)="speakFirstWaypoint();"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col class="d-flex" justify-content-end>
+      <ion-button (click)="showWaypoints()" class="custom-btn-rounded">
+        <ion-icon name="list"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

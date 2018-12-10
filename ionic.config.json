@@ -1,0 +1,7 @@
+{
+  "name": "viibeNav",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

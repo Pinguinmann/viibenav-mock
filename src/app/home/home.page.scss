@@ -1,0 +1,31 @@
+@mixin setEqualDimension($value) {
+  width: $value;
+  height: $value;
+}
+
+.home {
+  .action-container {
+    &:first-child {
+      margin-top: .5rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .action-col {
+    display: flex;
+    justify-content: center;
+
+    ion-button.custom-btn-rounded {
+      --height: 10rem;
+      --width: 10rem;
+
+      ion-icon {
+        font-size: 8rem;
+
+        &.list-box {
+          padding: .5rem;
+        }
+      }
+    }
+  }
+}

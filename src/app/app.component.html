@@ -1,0 +1,16 @@
+<ion-app>
+  <ion-header>
+      <ion-toolbar>
+        <ion-title>
+          <ion-icon name="logo-android"></ion-icon>
+          <span>
+            <ng-container *ngIf="activeRoute">
+              {{ activeRoute.name }}
+            </ng-container>
+          </span>
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>

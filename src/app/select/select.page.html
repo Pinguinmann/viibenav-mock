@@ -1,0 +1,19 @@
+<ion-content padding>
+  <ion-row class="results-list">
+    <ion-col>
+      <ion-list>
+        <ion-list-header>
+          <ion-label>Einträge</ion-label>
+        </ion-list-header>
+        <ng-container *ngFor="let room of roomList">
+          <ion-item (click)="startNavigation()" no-padding>
+            <div class="result-item">
+              <div class="person">{{ room.person }}</div>
+              <div class="room-name">{{ room.room_identifier[0] }}</div>
+            </div>
+          </ion-item>
+        </ng-container>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+</ion-content>

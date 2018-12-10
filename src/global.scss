@@ -1,0 +1,49 @@
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+
+@import 'custom-variables';
+
+@mixin setEqualDimensionIonic($value) {
+  --height: $value;
+  --width: $value;
+}
+
+ion-toolbar {
+  --background: var(--yellow, yellow);
+
+  ion-title {
+    display: flex;
+    ion-icon {
+      margin-right: .75rem;
+      --padding-top: .25rem;
+    }
+
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+
+ion-button.custom-btn-rounded {
+  --background: var(--yellow, yellow);
+  --color: #000;
+  --color-activated: #000;
+  --border-radius: 50%;
+  --box-shadow: 3px 3px 12px #9E9E9E;
+}
+
+.btn-label {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-top: .75rem;
+}

@@ -1,0 +1,20 @@
+
+:root {
+  --yellow: #ffeb3b;
+  --appbarHeight: 72px;
+}
+
+ion-toolbar {
+  --color: #000;
+  --min-height: var(--appbarHeight, 72px);
+}
+
+ion-router-outlet {
+  margin-top: var(--appbarHeight, 72px);
+}
+
+ion-title {
+  font-size: 2rem;
+}
+
+

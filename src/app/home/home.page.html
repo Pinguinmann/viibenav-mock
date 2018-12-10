@@ -1,0 +1,18 @@
+<ion-content class="home" padding>
+    <ion-grid>
+      <ng-container *ngFor="let action of actions">
+        <div class="action-container">
+          <ion-row justify-content-center>
+            <ion-col size="6" class="action-col">
+              <ion-button class="custom-btn-rounded" (click)="navigateTo(action.pageName)">
+                <ion-icon class="{{action.iconName}}" name="{{action.iconName}}"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row class="btn-label">
+            <ion-col text-center>{{action.name}}</ion-col>
+          </ion-row>
+        </div>
+      </ng-container>
+    </ion-grid>
+</ion-content>

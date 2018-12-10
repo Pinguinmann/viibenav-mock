@@ -1,0 +1,59 @@
+<ion-content *ngIf="searchRequest && searchResults" padding>
+  <ion-row>
+    <ion-col text-center>
+      <h5 class="results-test">Suche nach <em class="search-request">{{searchRequest}}</em> ergab {{searchResults.length}} Treffer.</h5>
+    </ion-col>
+  </ion-row>
+
+  <ng-container *ngIf="searchResults && searchResults.length === 0">
+    <ion-row>
+      <ion-col>
+        <p class="info-text">
+          Sie können entweder eine neue Suche mit einem anderen Suchbegriff
+          starten oder einen Raum aus der Liste wählen.
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="show-list" (click)="goToRoomList();">
+        <ion-button class="custom-btn-rounded">
+          <ion-icon name="list-box"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="btn-label">
+      <ion-col text-center>Aus Liste wählen</ion-col>
+    </ion-row>
+  </ng-container>
+
+  <ng-container *ngIf="searchResults && searchResults.length > 0">
+    <ion-row>
+      <ion-col>
+        <p class="info-text">
+          Ist die gewünschte Person oder der gewünschte Raum in den Treffern aufgeführt,
+          wählen Sie sie an, um die Navigation zu starten.
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="results-list">
+      <ion-col>
+        <ion-list>
+          <ion-list-header>
+            <ion-label>Ergebnisse</ion-label>
+          </ion-list-header>
+          <ng-container *ngFor="let result of searchResults">
+            <ion-item (click)="startNavigation()" no-padding>
+              <div class="result-item">
+                <div class="person">{{ result.person }}</div>
+                <div class="room-name">{{ result.room_identifier[0] }}</div>
+              </div>
+            </ion-item>
+          </ng-container>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ng-container>
+
+
+
+</ion-content>

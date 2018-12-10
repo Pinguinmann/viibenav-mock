@@ -1,0 +1,10 @@
+<ion-content padding>
+  <ng-container *ngFor="let waypoint of waypoints; let index = index">
+    <ion-row>
+      <ion-col>
+        {{ waypoint.waypoint }}
+      </ion-col>
+    </ion-row>
+    <hr *ngIf="index !== waypoints.length -1">
+  </ng-container>
+</ion-content>

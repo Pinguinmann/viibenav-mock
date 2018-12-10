@@ -1,0 +1,32 @@
+
+.results-text {
+  font-size: 1.75rem;
+}
+.search-request {
+
+}
+
+.show-list {
+  display: flex;
+  justify-content: center;
+
+  ion-button {
+    margin-top: 3rem;
+
+    --width: 10rem;
+    --height: 10rem;
+
+    ion-icon {
+      font-size: 8rem;
+
+      &.list-box {
+        padding: .5rem;
+      }
+    }
+  }
+
+  .show-list-label {
+    text-align: center;
+  }
+}
+
